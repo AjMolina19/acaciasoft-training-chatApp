@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Messages extends Model
 {
-    public function user_messages() {
+    public function userMessages() {
         return $this->hasMany(UserMessages::class);
     }
 

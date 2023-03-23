@@ -22,3 +22,6 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/conversation/{userId}', 'MessageController@conversation')->name('message.conversation');
 Route::post('send-message', 'MessageController@sendmessage')->name('message.send-message');
+
+Route::resource('group-message', 'GroupMessageController');
+Route::post('send-group-message', 'MessageController@send_group_message')->name('message.send-group-message');
